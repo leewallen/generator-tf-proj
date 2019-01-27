@@ -1,0 +1,25 @@
+{
+  "maintainers": [
+    {
+      "name": "Lee Wallen"
+    }
+  ],
+  "name": "generator-tf-proj",
+  "version": "0.1.0",
+  "description": "Create a simple folder structure for use with terraform and the aws provider.",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "aws",
+    "terraform"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "repository": "leewallen/generator-tf-proj",
+  "license": "MIT"
+}

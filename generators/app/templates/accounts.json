@@ -1,0 +1,6 @@
+{
+  "prod": ["prod"],
+  "stage": ["nonprod"],
+  "candidate": ["nonprod"],
+  "sandbox": ["sandbox"]
+}
