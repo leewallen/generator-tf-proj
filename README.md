@@ -17,14 +17,13 @@ Next, you need to [install Yeoman](https://yeoman.io).
 npm install -g yo
 ```
 
-Clone the [generator-tf-proj source](https://github.com/leewallen/generator-tf-proj.git) using git. 
+Now you can install generator-tf-proj.
 
 ```shell
-git clone https://github.com/leewallen/generator-tf-proj.git
-cd generator-tf-proj
+npm install -g generator-tf-proj
 ```
 
-Finally, link the generator-tf-proj source to the installed npm packages. This will make it so that the terraform project generator will act like you installed it using `npm install -g generator-tf-proj`.
+**Note**: You can also clone the project from github, and then use `npm link` in the project's root directory. The link will make it so that the terraform project generator will act like you installed it using `npm install -g generator-tf-proj`.
 
 ```shell
 npm link
