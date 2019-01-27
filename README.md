@@ -1,4 +1,5 @@
- ![alt](./images/yo-man.jpg)
+
+ <img src="./images/yo-man.jpg" width="640">
 
 # About
 
