@@ -7,6 +7,12 @@
   "name": "generator-tf-proj",
   "version": "0.1.0",
   "description": "Create a simple folder structure for use with terraform and the aws provider.",
+  "homepage": "https://github.com/leewallen/generator-tf-proj",
+  "author": {
+    "name": "Lee Wallen",
+    "email": "lee_wallen@yahoo.com",
+    "url": "http://www.codecognition.org"
+  },
   "files": [
     "generators"
   ],
