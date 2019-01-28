@@ -201,7 +201,9 @@ module.exports = class extends Generator {
             {
               appName: this.appname,
               appDescription: this.props.appDescription,
-              components: components
+              components: components,
+              regions: regions,
+              environments: environments
             }
           );
           this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));

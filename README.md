@@ -85,12 +85,9 @@ Currently, the generator only supports AWS.
 
 Enter the provider version.
 
-## Provider version
-
 ```? What is the provider version?  1.7```
 
 ## Application group
-
 
 The application_group can be used for setting a team name responsible for creating the resource. Our example is for creating a solr cluster, so we'll call our application group `search`.
 
@@ -102,18 +99,15 @@ The next property is for setting the name of the business owner - this can be le
 
 ```? Who is the business owner? Lee Wallen```
 
-
 ## Terraform backend state storage type
 
 The tf-proj generator currently supports s3 and local. The backend settings will be created in a backend.tf file that will reside in the `./<group>/<region>/<component>` folder.
 
 ```? What state backend will you be using? (Full list of backends here: https://www.terraform.io/docs/backend/types/index.html): s3```
 
-
 ## Terraform state S3 bucket name
 
 We stated above that we wanted to use S3 for storing the terraform state files, so now we'll be prompted for the S3 bucket name.
-
 
 ```? Name of the S3 Bucket for remote terraform state: my-bucket```
 
