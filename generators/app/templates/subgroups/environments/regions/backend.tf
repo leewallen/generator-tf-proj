@@ -1,10 +1,14 @@
+<% if (backend == "s3") { %>
 provider "<%= provider %>" {
-    # provider parameters here. Override any secrets at run time and avoid storing them in source control
-    <% for (i in providerAttributes) { %>
-    <%= providerAttributes[i] %> = ""<% } %>
+  # provider parameters here. Override any secrets at run time and avoid storing them in source control
+  version = "~> <%= providerVersion %>"
+  region  = "${ var.region }"
+
+  assume_role {
+    role_arn = "<%= backendRoleArn %>"
+  }
 }
 
-<% if (backend == "s3") { %>
 terraform {
     backend "<%= backend %>" {
         bucket   = "<%= backendBucketName %>"
@@ -15,12 +19,18 @@ terraform {
 }
 <% } %>
 <% if (backend == "local") { %>
+provider "<%= provider %>" {
+  # provider parameters here.
+  version = "~> <%= providerVersion %>"
+  region  = "${ var.region }"
 
-# FOR LOCAL
-# provider "aws" {
-#   region  = "us-west-2"
-#   profile = "oktad"
-# }
+  # Local using aws credentials profile
+  profile = "default"
+
+  # Override any secrets at run time and avoid storing them in source control
+  # access_key = ""
+  # secret_key = ""
+}
 
 terraform {
   backend "local" {

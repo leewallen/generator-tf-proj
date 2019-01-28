@@ -86,8 +86,18 @@ module.exports = class extends Generator {
       {
         when: props => props.backend === 's3',
         type: 'input',
+        name: 'providerVersion',
+        message: 'What is the provider version? ',
+        default: '1.7',
+        store: true
+      },
+      {
+        when: props => props.backend === 's3',
+        type: 'input',
         name: 'backendBucketName',
         message: 'Name of the S3 Bucket for remote terraform state: ',
+        default: 'my-bucket',
+        store: true,
         validate: input => input.length > 0
       },
       {
@@ -173,6 +183,7 @@ module.exports = class extends Generator {
             ),
             {
               provider: this.props.provider,
+              providerVersion: this.props.providerVersion,
               providerAttributes: providers[this.props.provider],
               backend: this.props.backend,
               region: region,
