@@ -1,9 +1,4 @@
 {
-  "maintainers": [
-    {
-      "name": "Lee Wallen"
-    }
-  ],
   "name": "generator-tf-proj",
   "version": "0.1.1",
   "description": "Create a simple folder structure for use with terraform and the aws provider.",
@@ -11,15 +6,15 @@
   "author": {
     "name": "Lee Wallen",
     "email": "lee_wallen@yahoo.com",
-    "url": "http://www.codecognition.org"
+    "url": "https://github.com/leewallen/generator-tf-proj/blob/master/README.md"
   },
   "files": [
     "generators"
   ],
+  "main": "generators/index.js",
   "keywords": [
-    "yeoman-generator",
-    "aws",
-    "terraform"
+    "terraform",
+    "yeoman-generator"
   ],
   "dependencies": {
     "yeoman-generator": "^1.1.1",
