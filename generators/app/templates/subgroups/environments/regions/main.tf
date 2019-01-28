@@ -6,7 +6,6 @@ variable "region" {}
 
 # Add additional variables here
 
-
 <% for (i in components) { %>
 module "<%= components[i] %>" {
     source            = "../../../modules/<%= components[i] %>"

@@ -4,14 +4,6 @@ provider "<%= provider %>" {
     <%= providerAttributes[i] %> = ""<% } %>
 }
 
-
-# FOR LOCAL
-# provider "aws" {
-#   region  = "us-west-2"
-#   profile = "oktad"
-# }
-
-
 <% if (backend == "s3") { %>
 terraform {
     backend "<%= backend %>" {
@@ -22,8 +14,14 @@ terraform {
     }
 }
 <% } %>
-
 <% if (backend == "local") { %>
+
+# FOR LOCAL
+# provider "aws" {
+#   region  = "us-west-2"
+#   profile = "oktad"
+# }
+
 terraform {
   backend "local" {
     path = "<%= backendLocalPathPrefix %>"
