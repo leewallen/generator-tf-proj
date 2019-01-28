@@ -1,4 +1,3 @@
-
  <img src="./images/yo-man.jpg" width="640">
 
 # About
