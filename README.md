@@ -75,47 +75,65 @@ The components prompt is for specifying names for the AWS resource groups. You c
 
 ```? What components will you be running (separate multiple responses by comma)? ec2,networking,lambda,s3```
 
-## Terraform backend state storage type
-
-The tf-proj generator currently supports s3 and local. The backend settings will be created in a backend.tf file that will reside in the `./<group>/<region>/<component>` folder.
-
-```? What state backend will you be using? (Full list of backends here: https://www.terraform.io/docs/backend/types/index.html): s3```
-
 ## Provider
 
 Currently, the generator only supports AWS.
 
 ```? What Terraform provider will you be using? (Full list of providers here: https://www.terraform.io/docs/providers): aws```
 
-## Populate standard properties 
+## Provider version
 
-You will now be prompted to enter values for properties that can be used for tagging resources.
+Enter the provider version.
+
+## Provider version
+
+```? What is the provider version?  1.7```
+
+## Application group
+
 
 The application_group can be used for setting a team name responsible for creating the resource. Our example is for creating a solr cluster, so we'll call our application group `search`.
 
 ```? What is your application group name? search```
 
+## Business Owner
+
 The next property is for setting the name of the business owner - this can be left blank.
 
 ```? Who is the business owner? Lee Wallen```
 
+
+## Terraform backend state storage type
+
+The tf-proj generator currently supports s3 and local. The backend settings will be created in a backend.tf file that will reside in the `./<group>/<region>/<component>` folder.
+
+```? What state backend will you be using? (Full list of backends here: https://www.terraform.io/docs/backend/types/index.html): s3```
+
+
+## Terraform state S3 bucket name
+
 We stated above that we wanted to use S3 for storing the terraform state files, so now we'll be prompted for the S3 bucket name.
 
-```? Name of the S3 Bucket for remote terraform state: my-pretend-bucket```
 
-And then prompted for a prefix to use for terraform state file.
+```? Name of the S3 Bucket for remote terraform state: my-bucket```
+
+## Terraform state file key prefix
+
+You'll be prompted for a prefix to use for terraform state file. The prefix will be used to create a key following the pattern found in the `subgroups/environments/regions/backend.tf` template file:
+
+`<%= backendBucketKeyPrefix %>/<%= environment %>/<%= region %>/terraform.tfstate`
 
 ```? The key prefix for the remote terraform state files: terraform-remote-state```
 
-**Note**: If you chose S3 for the remote state storage, then the `subgroups/environments/regions/backend.tf` template file will create the key with this pattern:
-
-```<%= backendBucketKeyPrefix %>/<%= environment %>/<%= region %>/terraform.tfstate```
+## Terraform state file bucket region
 
 Enter the region name to use for storing the S3 bucket.
 
 ```? The AWS region for the S3 Bucket us-west-2```
 
-And enter the Amazon Resource Name (ARN) to use for writing to the S3 bucket.
+## Role ARN to use for accessing the bucket
+
+Enter the Amazon Resource Name (ARN) to use for writing to the S3 bucket.
 
 ```? The default role arn to use when reading/writing the terraform state:  arn:aws:iam::ENTER_AN_ACCOUNT_NUMBER:role/ENTER_A_ROLE_NAME```
 

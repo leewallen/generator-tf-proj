@@ -58,17 +58,17 @@ module.exports = class extends Generator {
       },
       {
         type: 'list',
-        name: 'backend',
-        message:
-          'What state backend will you be using? (Full list of backends here: https://www.terraform.io/docs/backend/types/index.html) ',
-        choices: Object.keys(backends)
-      },
-      {
-        type: 'list',
         name: 'provider',
         message:
           'What Terraform provider will you be using? (Full list of providers here: https://www.terraform.io/docs/providers) ',
         choices: Object.keys(providers)
+      },
+      {
+        type: 'input',
+        name: 'providerVersion',
+        message: 'What is the provider version? ',
+        default: '1.7',
+        store: true
       },
       {
         type: 'input',
@@ -84,12 +84,11 @@ module.exports = class extends Generator {
         store: true
       },
       {
-        when: props => props.backend === 's3',
-        type: 'input',
-        name: 'providerVersion',
-        message: 'What is the provider version? ',
-        default: '1.7',
-        store: true
+        type: 'list',
+        name: 'backend',
+        message:
+          'What state backend will you be using? (Full list of backends here: https://www.terraform.io/docs/backend/types/index.html) ',
+        choices: Object.keys(backends)
       },
       {
         when: props => props.backend === 's3',
