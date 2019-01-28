@@ -11,7 +11,7 @@ I decided to create a terraform generator after seeing William Tsoi's excellent 
 
 Yeoman requires Node.js and npm. You can install that from [here](https://nodejs.org/en/download/).
 
-Next, you need to [install Yeoman](https://yeoman.io).
+Once you have Node.js installed, then [install Yeoman](https://yeoman.io).
 
 ```shell
 npm install -g yo
