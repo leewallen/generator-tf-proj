@@ -28,9 +28,10 @@ module.exports = class extends Generator {
         name: 'subgroups',
         message:
           'What are the logical group names for your project (separate multiple responses by comma)? ',
-        default: 'creative,editorial,footage',
+        default: 'solr,zookeeper',
         choices: Object.keys(accounts),
-        store: true
+        store: true,
+        validate: input => input.length > 0
       },
       {
         type: 'input',
@@ -38,7 +39,8 @@ module.exports = class extends Generator {
         message:
           'What logical environments will you be running (separate multiple responses by comma)? ',
         default: 'sandbox,candidate,stage,prod',
-        store: true
+        store: true,
+        validate: input => input.length > 0
       },
       {
         type: 'input',
