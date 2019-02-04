@@ -6,6 +6,8 @@ This yeoman generator will create scaffolding for creating terraform for AWS res
 
 I decided to create a terraform generator after seeing William Tsoi's excellent [generator-terraform-environments](https://github.com/williamtsoi1/generator-terraform-environments) project. I like to use a different directory structure for my projects, so I decided to create a generator that would use my preferred layout.
 
+I'm eager to make this as usable as possible, so please consider entering bug reports and/or feature requests as needed.
+
 # Installation
 
 Yeoman requires Node.js and npm. You can install that from [here](https://nodejs.org/en/download/).
