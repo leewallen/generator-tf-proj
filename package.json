@@ -1,13 +1,9 @@
 {
   "name": "generator-tf-proj",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Create a simple folder structure for use with terraform and the aws provider.",
   "homepage": "https://github.com/leewallen/generator-tf-proj/blob/master/README.md",
-  "author": {
-    "name": "Lee Wallen",
-    "email": "lee@codecogntion.org",
-    "url": "https://github.com/leewallen/generator-tf-proj/blob/master/README.md"
-  },
+  "author": "Lee Wallen <lee@codecogntion.org> (https://github.com/leewallen/generator-tf-proj/blob/master/README.md)",
   "files": [
     "generators"
   ],
@@ -21,6 +17,16 @@
     "chalk": "^2.1.0",
     "yosay": "^2.0.1"
   },
-  "repository": "leewallen/generator-tf-proj",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leewallen/generator-tf-proj.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leewallen/generator-tf-proj/issues"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
