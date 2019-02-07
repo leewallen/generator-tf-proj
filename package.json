@@ -1,6 +1,6 @@
 {
   "name": "generator-tf-proj",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Create a simple folder structure for use with terraform and the aws provider.",
   "homepage": "https://github.com/leewallen/generator-tf-proj/blob/master/README.md",
   "author": "Lee Wallen <lee@codecogntion.org> (https://github.com/leewallen/generator-tf-proj/blob/master/README.md)",
